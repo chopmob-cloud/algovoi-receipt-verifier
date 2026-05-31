@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algovoi-receipt-verifier"
+version = "0.1.0"
+description = "Standalone cryptographic verifier for AlgoVoi JWS compliance receipts. Offline-capable, no AlgoVoi infrastructure trust required."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "AlgoVoi", email = "chopmob@gmail.com" },
+]
+keywords = [
+  "x402", "ap2", "a2a", "jws", "ed25519",
+  "jcs", "rfc8785", "compliance-receipt",
+  "agentic-payments", "receipt-verifier",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+dependencies = [
+  "rfc8785>=0.1.4",
+  "cryptography>=42.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+  "pytest-cov>=4",
+]
+
+[project.urls]
+Homepage = "https://api.algovoi.co.uk"
+Documentation = "https://docs.algovoi.co.uk/platform/compliance-receipts"
+Repository = "https://github.com/chopmob-cloud/algovoi-receipt-verifier"
+Issues = "https://github.com/chopmob-cloud/algovoi-receipt-verifier/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["algovoi_receipt_verifier*"]
+
+[tool.setuptools.package-data]
+algovoi_receipt_verifier = ["py.typed"]

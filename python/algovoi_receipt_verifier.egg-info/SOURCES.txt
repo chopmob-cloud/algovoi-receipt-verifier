@@ -1,0 +1,13 @@
+pyproject.toml
+algovoi_receipt_verifier/__init__.py
+algovoi_receipt_verifier/errors.py
+algovoi_receipt_verifier/jws.py
+algovoi_receipt_verifier/py.typed
+algovoi_receipt_verifier/receipt.py
+algovoi_receipt_verifier.egg-info/PKG-INFO
+algovoi_receipt_verifier.egg-info/SOURCES.txt
+algovoi_receipt_verifier.egg-info/dependency_links.txt
+algovoi_receipt_verifier.egg-info/requires.txt
+algovoi_receipt_verifier.egg-info/top_level.txt
+tests/test_jws.py
+tests/test_receipt.py

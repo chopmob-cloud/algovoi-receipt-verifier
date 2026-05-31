@@ -1,0 +1,6 @@
+rfc8785>=0.1.4
+cryptography>=42.0
+
+[test]
+pytest>=7
+pytest-cov>=4

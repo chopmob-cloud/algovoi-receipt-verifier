@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: algovoi-receipt-verifier
+Version: 0.1.0
+Summary: Standalone cryptographic verifier for AlgoVoi JWS compliance receipts. Offline-capable, no AlgoVoi infrastructure trust required.
+Author-email: AlgoVoi <chopmob@gmail.com>
+License: Apache-2.0
+Project-URL: Homepage, https://api.algovoi.co.uk
+Project-URL: Documentation, https://docs.algovoi.co.uk/platform/compliance-receipts
+Project-URL: Repository, https://github.com/chopmob-cloud/algovoi-receipt-verifier
+Project-URL: Issues, https://github.com/chopmob-cloud/algovoi-receipt-verifier/issues
+Keywords: x402,ap2,a2a,jws,ed25519,jcs,rfc8785,compliance-receipt,agentic-payments,receipt-verifier
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: rfc8785>=0.1.4
+Requires-Dist: cryptography>=42.0
+Provides-Extra: test
+Requires-Dist: pytest>=7; extra == "test"
+Requires-Dist: pytest-cov>=4; extra == "test"
