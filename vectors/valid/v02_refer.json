@@ -1,0 +1,15 @@
+{
+  "description": "Valid REFER compliance receipt. REFER is load-bearing for UK POCA s.330 SAR obligations.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiLCJFVSJdLCJwYXllcl9yZWYiOiJzaGEyNTY6YWFiYmNjZGQiLCJwYXltZW50X2hhc2giOiJzaGEyNTY6ZGVhZGJlZWYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInNjcmVlbl9wcm92aWRlcl9kaWQiOiJkaWQ6d2ViOmFwaS5hbGdvdm9pLmNvLnVrIiwic2NyZWVuX3Jlc3VsdCI6IlJFRkVSIiwic2NyZWVuX3RpbWVzdGFtcF9tcyI6MTc0ODY0OTYwMDAwMH0.sYPEkB0QKIIFSZ4gWSDwQ-xe0XPP_L4PI5iM498Gp0Z8J1IVNXO1t034Qxze3lY2GhAT8CCxc24ZoWE3GXZLBA",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_screen_result": "REFER"
+}

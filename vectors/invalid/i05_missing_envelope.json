@@ -1,0 +1,16 @@
+{
+  "description": "jws field is null and receipt_required=true. Phase 8 ATB threat: receipt-missing-envelope. Verifier must reject with MISSING_ENVELOPE.",
+  "jws": null,
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "receipt_required": true,
+  "expected_error_code": "MISSING_ENVELOPE"
+}

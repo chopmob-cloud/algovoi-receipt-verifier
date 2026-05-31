@@ -1,0 +1,15 @@
+{
+  "description": "Valid ALLOW receipt with a single jurisdiction flag.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiXSwicGF5ZXJfcmVmIjoic2hhMjU2OmFhYmJjY2RkIiwicGF5bWVudF9oYXNoIjoic2hhMjU2OmRlYWRiZWVmMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJzY3JlZW5fcHJvdmlkZXJfZGlkIjoiZGlkOndlYjphcGkuYWxnb3ZvaS5jby51ayIsInNjcmVlbl9yZXN1bHQiOiJBTExPVyIsInNjcmVlbl90aW1lc3RhbXBfbXMiOjE3NDg2NDk2MDAwMDB9.DeIdzx9vNb-IDC7ZoXnBss0zeseym7pJ9_vfwsq8R4GAxze-peouA-g-imwVvWXu2wfbqYOabSpooSPlXWhQDA",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_screen_result": "ALLOW"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "JWS header declares alg=HS512-CUSTOM \u2014 not in the permitted list (EdDSA, ES256K, RS256). Phase 8 ATB threat: receipt-alg-unknown. Verifier must reject with UNSUPPORTED_ALG without attempting verification.",
+  "jws": "eyJhbGciOiJIUzUxMi1DVVNUT00iLCJraWQiOiJ2MC1rZXkiLCJ0eXAiOiJKV1QifQ.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiLCJFVSJdLCJwYXllcl9yZWYiOiJzaGEyNTY6YWFiYmNjZGQiLCJwYXltZW50X2hhc2giOiJzaGEyNTY6ZGVhZGJlZWYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInNjcmVlbl9wcm92aWRlcl9kaWQiOiJkaWQ6d2ViOmFwaS5hbGdvdm9pLmNvLnVrIiwic2NyZWVuX3Jlc3VsdCI6IkFMTE9XIiwic2NyZWVuX3RpbWVzdGFtcF9tcyI6MTc0ODY0OTYwMDAwMH0.2Q2a3dux_8AqkH9KfDf2Esz9aUStkHyUhjyGUSGZdQUTqSGRFM7YAUbemISwwT4v7i1MMNYQgW8GvPDtlmiOCA",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_error_code": "UNSUPPORTED_ALG"
+}

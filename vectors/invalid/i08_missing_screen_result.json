@@ -1,0 +1,15 @@
+{
+  "description": "screen_result field is absent from the receipt payload. Verifier must reject with MISSING_FIELD.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiLCJFVSJdLCJwYXllcl9yZWYiOiJzaGEyNTY6YWFiYmNjZGQiLCJwYXltZW50X2hhc2giOiJzaGEyNTY6ZGVhZGJlZWYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInNjcmVlbl9wcm92aWRlcl9kaWQiOiJkaWQ6d2ViOmFwaS5hbGdvdm9pLmNvLnVrIiwic2NyZWVuX3RpbWVzdGFtcF9tcyI6MTc0ODY0OTYwMDAwMH0.fMq2pV3wHIHkr20w0RBBHTSmTAWdPmPQNrzM36m4DyzthU-gseS_jdlUNQiVsSc74SIwSW6ZPmjTWBbhePE3Cw",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_error_code": "MISSING_FIELD"
+}

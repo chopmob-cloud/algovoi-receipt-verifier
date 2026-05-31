@@ -1,0 +1,15 @@
+{
+  "description": "JWS string has only two parts (missing signature segment). Verifier must reject with INVALID_JWS_FORMAT.",
+  "jws": "onlytwo.parts",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_error_code": "INVALID_JWS_FORMAT"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Valid DENY compliance receipt.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiLCJFVSJdLCJwYXllcl9yZWYiOiJzaGEyNTY6YWFiYmNjZGQiLCJwYXltZW50X2hhc2giOiJzaGEyNTY6ZGVhZGJlZWYwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInNjcmVlbl9wcm92aWRlcl9kaWQiOiJkaWQ6d2ViOmFwaS5hbGdvdm9pLmNvLnVrIiwic2NyZWVuX3Jlc3VsdCI6IkRFTlkiLCJzY3JlZW5fdGltZXN0YW1wX21zIjoxNzQ4NjQ5NjAwMDAwfQ.18oj1AxGZEEMP7YcdKrufO6NzkvLW30hEfcUxpUfgqqxcQlQEkdhhIlNCr_oqvQX03qvKva7Q99Dn0E3eVQ4Bw",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_screen_result": "DENY"
+}

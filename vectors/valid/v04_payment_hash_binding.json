@@ -1,0 +1,16 @@
+{
+  "description": "Valid ALLOW receipt with payment_hash binding. Verifier must accept when expected_payment_hash matches.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiLCJFVSJdLCJwYXllcl9yZWYiOiJzaGEyNTY6YWFiYmNjZGQiLCJwYXltZW50X2hhc2giOiJzaGEyNTY6MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsInNjcmVlbl9wcm92aWRlcl9kaWQiOiJkaWQ6d2ViOmFwaS5hbGdvdm9pLmNvLnVrIiwic2NyZWVuX3Jlc3VsdCI6IkFMTE9XIiwic2NyZWVuX3RpbWVzdGFtcF9tcyI6MTc0ODY0OTYwMDAwMH0.oTNVW8YaR5bgKy2VNCkG9ydp-qq9eZSIZxsKeMNuPxnJDUpdG-atHo7JUawg7ASprMJWzJyDHKL0zCUIfmmXAg",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_payment_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "expected_screen_result": "ALLOW"
+}

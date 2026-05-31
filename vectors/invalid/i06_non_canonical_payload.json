@@ -1,0 +1,19 @@
+{
+  "description": "JWS payload is valid JSON but not RFC 8785 canonical \u2014 key 'zzz_not_in_schema' appears first in insertion order but sorts last under RFC 8785 \u00a73.2.1 lexicographic ordering. Phase 8 ATB threat: receipt-bad-jcs. Verifier must detect that re-canonicalised bytes differ from the signed bytes and reject with TAMPERED_SIGNATURE or NON_CANONICAL_PAYLOAD.",
+  "jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InYwLWtleSIsInR5cCI6IkpXVCJ9.eyJ6enpfbm90X2luX3NjaGVtYSI6IngiLCJjYW5vbl92ZXJzaW9uIjoiamNzLXJmYzg3ODUtdjEiLCJqdXJpc2RpY3Rpb25fZmxhZ3MiOlsiVUsiXSwicGF5ZXJfcmVmIjoic2hhMjU2OmFhYmJjY2RkIiwicGF5bWVudF9oYXNoIjoic2hhMjU2OngiLCJzY3JlZW5fcHJvdmlkZXJfZGlkIjoiZGlkOndlYjphcGkuYWxnb3ZvaS5jby51ayIsInNjcmVlbl9yZXN1bHQiOiJBTExPVyIsInNjcmVlbl90aW1lc3RhbXBfbXMiOjE3NDg2NDk2MDAwMDB9.zU_G9POIQiDnV73DXVlDIOmcqa77m3cXza2Ao_-iYstlouzGOTXH3hV229osKvpcq4VrQSLGZzchHtvkSiY1Dw",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "7Xu4NrOfmRpsoV2Bw9SRICQDCk3aX7Iq9BJy7_mpsh8",
+        "kid": "v0-key"
+      }
+    ]
+  },
+  "expected_error_codes": [
+    "TAMPERED_SIGNATURE",
+    "NON_CANONICAL_PAYLOAD"
+  ],
+  "expected_error_code": "TAMPERED_SIGNATURE"
+}
