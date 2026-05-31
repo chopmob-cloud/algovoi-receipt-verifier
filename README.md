@@ -73,6 +73,14 @@ GET https://api.algovoi.co.uk/.well-known/jwks.json
 
 Pass the response body directly as `jwks`. The `kid` in the JWS header is used for key selection; falls back to the first key.
 
+## Hosted endpoint
+
+```bash
+curl -X POST https://api.algovoi.co.uk/v1/receipt/verify \
+  -H 'Content-Type: application/json' \
+  -d '{"jws": "<compact-jws>", "expected_payment_hash": "sha256:<hex>"}'
+```
+
 ## Cross-validation vectors
 
 `vectors/valid/` and `vectors/invalid/` contain 13 JSON fixtures run by both test suites. Regenerate with:
@@ -96,10 +104,36 @@ Each invalid fixture maps to a Phase 8 ATB threat:
 
 ## Test results
 
-| Implementation | Unit tests | Vector tests | Total |
-|---|---|---|---|
-| Python | 28/28 | 13/13 | **41/41** |
-| TypeScript | 19/19 (incl. vectors) | — | **19/19** |
+| Implementation | Unit tests | Vector tests | E2E (from registry) | Total |
+|---|---|---|---|---|
+| Python | 28/28 | 13/13 | 13/13 | **41/41** |
+| TypeScript | 19/19 (incl. vectors) | — | 13/13 | **19/19** |
+
+E2E tests install from the live registries into a clean environment:
+
+```bash
+node e2e/test_registry_npm.mjs
+python e2e/test_registry_python.py
+```
+
+## Application matrix
+
+This package is part of the AlgoVoi open-source package suite. All packages share the same JCS canonicalisation substrate and Apache 2.0 licence.
+
+| Package | Role | Relation |
+|---|---|---|
+| [`algovoi-substrate`](https://pypi.org/project/algovoi-substrate/) / [`@algovoi/substrate`](https://www.npmjs.com/package/@algovoi/substrate) | JCS canonicalisation + compliance receipt **emitter** | Builds the receipts this verifier checks; `canon_version` pin comes from here |
+| [`algovoi-substrate-pqc`](https://pypi.org/project/algovoi-substrate-pqc/) / [`@algovoi/substrate-pqc`](https://www.npmjs.com/package/@algovoi/substrate-pqc) | PQC-aware additive layer over substrate | Future: ML-DSA-65 / hybrid signing of compliance receipts |
+| [`algovoi-audit-verifier`](https://pypi.org/project/algovoi-audit-verifier/) / [`@algovoi/audit-verifier`](https://www.npmjs.com/package/@algovoi/audit-verifier) | Selective-disclosure audit bundle verifier | Receipt verification outcome is chained into the audit bundle |
+| [`algovoi-settlement-attestation`](https://pypi.org/project/algovoi-settlement-attestation/) / [`@algovoi/settlement-attestation`](https://www.npmjs.com/package/@algovoi/settlement-attestation) | Multi-chain settlement record | Pairs with the compliance receipt in the payment lifecycle |
+| [`algovoi-cancellation-receipt`](https://pypi.org/project/algovoi-cancellation-receipt/) / [`@algovoi/cancellation-receipt`](https://www.npmjs.com/package/@algovoi/cancellation-receipt) | Mandate cancellation receipt | Shares the same JCS substrate and `canon_version` discipline |
+| [`algovoi-refund-receipt`](https://pypi.org/project/algovoi-refund-receipt/) / [`@algovoi/refund-receipt`](https://www.npmjs.com/package/@algovoi/refund-receipt) | Post-settlement refund receipt | Composes with compliance receipts in the audit chain |
+| [`algovoi-composite-trust-query`](https://pypi.org/project/algovoi-composite-trust-query/) / [`@algovoi/composite-trust-query`](https://www.npmjs.com/package/@algovoi/composite-trust-query) | Top-of-stack verifier aggregator | Consumes receipt verification signals; emits `TRUSTED` / `PROVISIONAL` / `UNTRUSTED` |
+| [`algovoi-rfc9421-verifier`](https://pypi.org/project/algovoi-rfc9421-verifier/) / [`@algovoi/rfc9421-verifier`](https://www.npmjs.com/package/@algovoi/rfc9421-verifier) | RFC 9421 HTTP message signature verifier | Verifies request signatures; receipt verifier covers the JWS receipt payload |
+| [`algovoi-jcs-conformance-vectors`](https://github.com/chopmob-cloud/algovoi-jcs-conformance-vectors) | 53-vector JCS conformance corpus | The `jcs-rfc8785-v1` canon_version this verifier enforces is specified here |
+| [`algovoi-mcp-server`](https://pypi.org/project/algovoi-mcp/) / [`@algovoi/mcp-server`](https://www.npmjs.com/package/@algovoi/mcp-server) | 28-tool MCP gateway server | `get_compliance_attestation` and `screen_recipient` tools emit receipts verified by this package |
+
+Full package suite documentation: [docs.algovoi.co.uk/package-suite](https://docs.algovoi.co.uk/package-suite)
 
 ## Related
 
@@ -107,6 +141,7 @@ Each invalid fixture maps to a Phase 8 ATB threat:
 - [`algovoi-audit-verifier`](https://github.com/chopmob-cloud/algovoi-audit-verifier) — audit bundle verifier
 - [Agent Trust Bench](https://agent-trust-bench.algovoi.co.uk/) — Phase 8 receipt/substrate-integrity profiles
 - [AlgoVoi platform](https://api.algovoi.co.uk) — live gateway
+- [Docs](https://docs.algovoi.co.uk/receipt-verifier) — full documentation
 
 ## License
 
