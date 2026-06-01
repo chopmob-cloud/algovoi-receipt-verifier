@@ -1,0 +1,11 @@
+algovoi-receipt-verifier
+Copyright 2026 AlgoVoi (Christopher Hopley)
+
+This product includes software developed by AlgoVoi
+(https://docs.algovoi.co.uk/acquisition).
+
+This work builds on RFC 8785 (JSON Canonicalization Scheme), an IETF standard
+edited by Anders Rundgren. AlgoVoi acknowledges RFC 8785 as the underlying
+canonicalisation scheme and does not claim authorship of it. AlgoVoi's authorship
+covers the AlgoVoi-authored specifications and the canonicalisation discipline
+that pins RFC 8785 together with SHA-256 for x402, not RFC 8785 itself.
