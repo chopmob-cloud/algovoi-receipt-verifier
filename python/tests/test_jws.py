@@ -79,8 +79,21 @@ class TestVerifyJws:
         sk, pk = ed25519_keypair
         token = _make_jws({"foo": "bar"}, sk)
         h, p, s = token.split(".")
-        # Flip one character in the signature
-        corrupted_sig = s[:-1] + ("A" if s[-1] != "A" else "B")
+        # Tamper at the byte level. Mutating a base64url character is not
+        # reliable: the trailing character of an unpadded segment carries
+        # only a few significant bits, so many single-character edits decode
+        # to the *same* bytes and the signature would still verify. Decode,
+        # flip a byte in the middle, and re-encode so the signature bytes
+        # always change.
+        sig_bytes = bytearray(base64.urlsafe_b64decode(s + "=" * (-len(s) % 4)))
+        mid = len(sig_bytes) // 2
+        sig_bytes[mid] ^= 0xFF
+        corrupted_sig = _b64u(bytes(sig_bytes))
+        # Guard the invariant: the tampered signature must decode to
+        # different bytes, otherwise the test is not exercising rejection.
+        assert base64.urlsafe_b64decode(
+            corrupted_sig + "=" * (-len(corrupted_sig) % 4)
+        ) != base64.urlsafe_b64decode(s + "=" * (-len(s) % 4))
         tampered = f"{h}.{p}.{corrupted_sig}"
         with pytest.raises(ReceiptVerificationError) as exc_info:
             verify_jws(tampered, public_key=pk)
