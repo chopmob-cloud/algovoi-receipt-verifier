@@ -18,7 +18,7 @@ import { tmpdir } from 'node:os';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO      = join(__dirname, '..');
 const VECTORS   = join(REPO, 'vectors');
-const PACKAGE   = '@algovoi/receipt-verifier@0.1.0';
+const PACKAGE   = '@algovoi/receipt-verifier@0.1.1';
 
 const run = (cmd, cwd) => execSync(cmd, { cwd, stdio: 'pipe' }).toString();
 

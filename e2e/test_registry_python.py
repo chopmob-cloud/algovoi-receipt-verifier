@@ -20,7 +20,7 @@ from pathlib import Path
 
 REPO = Path(__file__).parent.parent
 VECTORS = REPO / "vectors"
-PACKAGE = "algovoi-receipt-verifier==0.1.0"
+PACKAGE = "algovoi-receipt-verifier==0.1.1"
 
 
 def run(cmd: list[str], cwd: Path | None = None, capture: bool = True) -> str:
