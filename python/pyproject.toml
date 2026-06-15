@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "algovoi-receipt-verifier"
-version = "0.1.0"
+version = "0.1.1"
 description = "Standalone cryptographic verifier for AlgoVoi JWS compliance receipts. Offline-capable, no AlgoVoi infrastructure trust required."
 readme = "README.md"
 requires-python = ">=3.10"

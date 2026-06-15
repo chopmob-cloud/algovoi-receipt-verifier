@@ -1,6 +1,6 @@
 {
   "name": "@algovoi/receipt-verifier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cryptographic verifier for AlgoVoi JWS compliance receipts. Offline-capable, no AlgoVoi infrastructure trust required. Byte-for-byte parity with the Python algovoi-receipt-verifier.",
   "keywords": [
     "x402", "ap2", "a2a", "jws", "ed25519",
