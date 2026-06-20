@@ -162,3 +162,9 @@ https://docs.algovoi.co.uk/canonicalisation-substrate
 ```
 
 The full invitation is at https://docs.algovoi.co.uk/canonicalisation-substrate#adopt-the-substrate
+
+## Related
+
+- [AlgoVoi substrate hub](https://chopmob-cloud.github.io/): the open JCS (RFC 8785) canonicalisation substrate for agentic payments
+- [Canonicalisation substrate docs](https://docs.algovoi.co.uk/canonicalisation-substrate)
+- [Agentic payment receipts](https://docs.algovoi.co.uk/agentic-payment-receipts): verifiable receipts across x402, AP2, A2A and MPP
