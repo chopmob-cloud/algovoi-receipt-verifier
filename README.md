@@ -1,11 +1,11 @@
-# algovoi-receipt-verifier
+# algovoi-receipt-verifier — offline-verifiable x402 agentic payment receipt
 
 [![PyPI](https://img.shields.io/pypi/v/algovoi-receipt-verifier?label=PyPI)](https://pypi.org/project/algovoi-receipt-verifier/)
 [![npm](https://img.shields.io/npm/v/@algovoi/receipt-verifier?label=npm)](https://www.npmjs.com/package/@algovoi/receipt-verifier)
 [![Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 [![Vectors](https://img.shields.io/badge/cross--validation-13%2F13-brightgreen)](https://github.com/chopmob-cloud/algovoi-receipt-verifier/tree/main/vectors)
 
-Cryptographic verifier for AlgoVoi JWS compliance receipts. Offline-capable — no AlgoVoi infrastructure trust required. Implementations in Python and TypeScript with 13 shared cross-validation vectors (5 valid, 8 invalid).
+Offline-verifiable x402 agentic payment receipt verifier. Re-derives the canonical bytes under JCS (RFC 8785), checks the Ed25519 signature, and validates `canon_version: jcs-rfc8785-v1` binding — all offline, with no AlgoVoi infrastructure trust required. Implementations in Python and TypeScript with 13 shared cross-validation vectors (5 valid, 8 invalid).
 
 ## What it verifies
 
