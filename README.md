@@ -1,6 +1,6 @@
 # algovoi-receipt-verifier — offline-verifiable x402 agentic payment receipt
 
-[![PyPI](https://img.shields.io/pypi/v/algovoi-receipt-verifier?label=PyPI)](https://pypi.org/project/algovoi-receipt-verifier/)
+[![PyPI](https://img.shields.io/pypi/v/algovoi-receipt-verifier?label=PyPI)](https://pypi.org/project/algovoi-receipt-verifier/) [![algovoi-audit-verifier](https://img.shields.io/badge/algovoi--audit--verifier-8A2BE2)](https://github.com/chopmob-cloud/algovoi-audit-verifier) [![algovoi-jcs-conformance-vectors](https://img.shields.io/badge/algovoi--jcs--conformance--vectors-8A2BE2)](https://github.com/chopmob-cloud/algovoi-jcs-conformance-vectors) [![algovoi-substrate](https://img.shields.io/badge/algovoi--substrate-8A2BE2)](https://github.com/chopmob-cloud/algovoi-substrate)
 [![npm](https://img.shields.io/npm/v/@algovoi/receipt-verifier?label=npm)](https://www.npmjs.com/package/@algovoi/receipt-verifier)
 [![Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 [![Vectors](https://img.shields.io/badge/cross--validation-13%2F13-brightgreen)](https://github.com/chopmob-cloud/algovoi-receipt-verifier/tree/master/vectors)
